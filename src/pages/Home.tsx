@@ -17,7 +17,7 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Sahayak - Home</IonTitle>
+          <IonTitle>Sunbird - Home</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
         <div className="ion-padding">
           <IonCard>
             <IonCardHeader>
-              <IonCardTitle>Welcome to Sahayak</IonCardTitle>
+              <IonCardTitle>Welcome to Sunbird Education</IonCardTitle>
             </IonCardHeader>
             <IonCardContent>
               Your educational management companion app powered by Ionic React.

@@ -1,75 +1,189 @@
-# Welcome to AXL Companion App
+# SunbirdED Mobile App
 
+A mobile application built with Ionic React framework for educational purposes.
 
-**Use your preferred IDE**
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=sunbirded-mobile-app&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=sunbirded-mobile-app)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=sunbirded-mobile-app&metric=coverage)](https://sonarcloud.io/summary/new_code?id=sunbirded-mobile-app)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **React**: 19.2.1
+- **TypeScript**: 5.9.3
+- **Ionic React**: 8.5.5
+- **Vite**: 5.4.11
+- **Capacitor**: 7.4.4
+- **React Router**: 5.3.4
+- **Jest**: 30.2.0
+- **Testing Library**: 16.3.1
 
-Follow these steps:
+## 📋 Prerequisites
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- Node.js 18.x or 20.x (LTS versions)
+- npm 10.x
+- Git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🛠️ Installation
 
-# Step 3: Install the necessary dependencies.
-npm i
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-org/SunbirdEd-mobile-app.git
+   cd SunbirdEd-mobile-app
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+2. **Install dependencies**
+   ```bash
+   npm install --legacy-peer-deps
+   ```
+
+## 🏃‍♂️ Running the App
+
+### Development Server
+
+Start the development server with hot reload:
+
+```bash
 npm run dev
 ```
 
-**Running on Android**
+The app will be available at `http://localhost:8080` (or next available port).
 
-This project includes Capacitor for mobile development. To run the app on Android:
+### Preview Production Build
 
-```sh
-# Step 1: Build the web app
+```bash
 npm run build
-
-# Step 2: Copy the built web assets to the Android project
-npx cap copy android
-
-# Step 3: Sync the Capacitor configuration and plugins
-npx cap sync android
-
-# Step 4: Open the Android project in Android Studio
-npx cap open android
-
-# Alternative: Run directly on a connected device or emulator
-npx cap run android
+npm run preview
 ```
 
-**Prerequisites for Android development:**
-- Android Studio installed with Android SDK
-- Java Development Kit (JDK) 17 or higher
-- Android device or emulator for testing
+## 🧪 Testing
 
-**Edit a file directly in GitHub**
+### Run all tests
+```bash
+npm test
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Watch mode
+```bash
+npm run test:watch
+```
 
-**Use GitHub Codespaces**
+### Coverage report
+```bash
+npm run test:coverage
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Test coverage threshold is set to 70% for statements, branches, functions, and lines.
 
-## What technologies are used for this project?
+## 🏗️ Building
 
-This project is built with:
+### Web Build
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-- Capacitor
+```bash
+npm run build
+```
+
+### Type Checking
+
+```bash
+npm run type-check
+```
+
+### Linting
+
+```bash
+npm run lint          # Check for issues
+npm run lint:fix      # Auto-fix issues
+```
+
+## 📱 Mobile Platforms
+
+### Android
+
+```bash
+npx cap sync android
+npx cap open android
+```
+
+### iOS (macOS only)
+
+```bash
+npx cap sync ios
+npx cap open ios
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── pages/              # Page components
+│   ├── Home.tsx
+│   ├── Dashboard.tsx
+│   └── Profile.tsx
+├── theme/              # Ionic theme variables
+│   └── variables.css
+├── App.tsx             # Main app component with routing
+├── main.tsx            # Application entry point
+└── setupTests.ts       # Test configuration
+
+.github/
+└── workflows/          # CI/CD workflows
+    └── pr-checks.yml   # PR validation workflow
+
+```
+
+## 🔄 CI/CD
+
+The project includes automated checks on pull requests:
+
+- **Lint Check**: Validates code style and quality
+- **Test Suite**: Runs all tests with coverage
+- **SonarCloud**: Code quality and security analysis
+
+## 🤝 Contributing
+
+1. Create a new branch from `develop`
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+2. Make your changes and ensure:
+   - All tests pass (`npm test`)
+   - Linting passes (`npm run lint`)
+   - Code coverage meets threshold
+
+3. Commit your changes following conventional commits:
+   ```bash
+   git commit -m "feat: add new feature"
+   ```
+
+4. Push and create a Pull Request to `develop`
+
+## 📝 Available Scripts
+
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm test` | Run tests |
+| `npm run test:watch` | Run tests in watch mode |
+| `npm run test:coverage` | Generate coverage report |
+| `npm run type-check` | Type check without emitting |
+| `npm run lint` | Check code quality |
+| `npm run lint:fix` | Fix linting issues |
+
+## 🔧 Configuration
+
+- **Vite**: [vite.config.ts](vite.config.ts)
+- **TypeScript**: [tsconfig.json](tsconfig.json)
+- **Jest**: [jest.config.js](jest.config.js)
+- **ESLint**: [eslint.config.js](eslint.config.js)
+- **PostCSS**: [postcss.config.js](postcss.config.js)
+- **Capacitor**: [capacitor.config.ts](capacitor.config.ts)
+
+## 📄 License
+
+This project is licensed under the ISC License.
+
+## 👥 Support
+
+For issues and questions, please create an issue in the GitHub repository.
